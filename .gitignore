@@ -27,3 +27,9 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+/target/classes/CardPayment.class
+/target/classes/Checkout.class
+/target/test-classes/CheckoutTest.class
+/target/classes/Main.class
+/target/classes/PaymentMethod.class
+/target/classes/PaypalPayment.class
