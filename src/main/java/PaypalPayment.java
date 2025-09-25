@@ -5,7 +5,7 @@ final class PaypalPayment implements PaymentMethod {
         this.limitInCents = limitInCents;
     }
 
-    @Override public boolean pay(int amountInCents) {
+    @Override public boolean payWith(int amountInCents) {
         return amountInCents >= limitInCents;
     }
 

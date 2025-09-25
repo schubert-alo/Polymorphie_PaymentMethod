@@ -5,7 +5,7 @@ final class CardPayment implements PaymentMethod {
         this.maxAmountInCents = maxAmountInCents;
     }
 
-    @Override public boolean pay(int amountInCents) {
+    @Override public boolean payWith(int amountInCents) {
         return amountInCents <= maxAmountInCents;
     }
 

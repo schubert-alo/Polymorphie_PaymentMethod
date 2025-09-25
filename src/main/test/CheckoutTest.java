@@ -10,9 +10,9 @@ class CheckoutTest {
         PaymentMethod card = new CardPayment(2_000);
 
         // When --> Act
-        boolean okAtLimit = co.pay(card, 2_000);
-        boolean okBelow   = co.pay(card, 1_999);
-        boolean notOkAbove = co.pay(card, 2_001);
+        boolean okAtLimit = co.payWith(card, 2_000);
+        boolean okBelow   = co.payWith(card, 1_999);
+        boolean notOkAbove = co.payWith(card, 2_001);
 
         // Then --> Assert
         assertTrue(okAtLimit);
@@ -27,8 +27,8 @@ class CheckoutTest {
         PaymentMethod paypal = new PaypalPayment(1); // min 1 ct
 
         // When / Then -->Act/Assert
-        assertFalse(co.pay(paypal, 0));
-        assertFalse(co.pay(paypal, -1));
-        assertTrue(co.pay(paypal, 1));
+        assertFalse(co.payWith(paypal, 0));
+        assertFalse(co.payWith(paypal, -1));
+        assertTrue(co.payWith(paypal, 1));
     }
 }
